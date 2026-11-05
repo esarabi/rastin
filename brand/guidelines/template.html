@@ -1,0 +1,191 @@
+<title>هویت بصری راستین</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap">
+<style>
+/* Layout: brand book — a coral cover band, then numbered chapters (the order mirrors how the identity is applied), each a heading row + specimen grid */
+:root{
+  --coral:#FF5A36; --amber:#FFB547; --ink:#1F1630; --paper:#FBF8F7; --line:#ECE6E9; --muted:#6B6375; --coral-50:#FFF1EC;
+  --bg:var(--paper); --surface:#FFFFFF; --fg:var(--ink); --sub:var(--muted); --rule:var(--line); --tint:var(--coral-50);
+  --f:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141019;--surface:#1D1724;--fg:#F4EFF6;--sub:#A79FB0;--rule:#2E2638;--tint:#2B1D22;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141019;--surface:#1D1724;--fg:#F4EFF6;--sub:#A79FB0;--rule:#2E2638;--tint:#2B1D22;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f);font-size:15px;line-height:1.85;direction:rtl}
+.in{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.35}
+p{margin:0;max-width:65ch}
+.cover{background:var(--coral);color:#fff}
+.cover .in{padding-block:56px 48px;display:grid;gap:28px}
+.cover .logo svg{height:96px;width:auto;max-width:100%}
+.cover h1{font-size:clamp(30px,5vw,52px);font-weight:900}
+.cover p{font-size:17px;opacity:.92}
+.cover .meta{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:13px;opacity:.85}
+main .in{padding-block:24px 72px;display:grid;gap:64px}
+section{display:grid;gap:22px}
+.hd{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:12px}
+.hd .n{font-weight:900;color:var(--coral);font-size:15px;font-variant-numeric:tabular-nums}
+.hd h2{font-size:24px;font-weight:800}
+.hd p{grid-column:2;color:var(--sub)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.tile{border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--surface);display:grid;min-width:0}
+.tile .art{display:grid;place-items:center;padding:28px;min-height:170px}
+.tile .art svg{max-width:100%;height:auto;max-height:110px;width:auto}
+.tile .cap{padding:10px 14px;border-top:1px solid var(--rule);font-size:13px;color:var(--sub);display:flex;justify-content:space-between;gap:8px}
+.cap code{direction:ltr;font-size:11.5px}
+.on-white{background:#fff}.on-ink{background:var(--ink)}.on-coral{background:var(--coral)}.on-tint{background:var(--tint)}
+.photo{background:linear-gradient(135deg,#3a2b4a,#8a3c3c 60%,#d4734f)}
+.space{position:relative;background:#fff}
+.space .box{position:relative;outline:2px dashed var(--coral);outline-offset:0;padding:34px;display:inline-block}
+.space .box svg{height:80px;width:auto;display:block}
+.space .x{position:absolute;font-size:11px;color:var(--coral);font-weight:700;direction:ltr}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px}
+.chip{border-radius:14px;overflow:hidden;border:1px solid var(--rule);background:var(--surface)}
+.chip .c{height:110px;padding:12px;display:flex;align-items:end;font-weight:800;font-size:13px}
+.chip dl{margin:0;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12px}
+.chip dt{color:var(--sub)} .chip dd{margin:0;direction:ltr;text-align:right;font-variant-numeric:tabular-nums}
+.ratio{display:flex;height:34px;border-radius:10px;overflow:hidden;border:1px solid var(--rule)}
+.ratio span{display:grid;place-items:center;font-size:11px;font-weight:700}
+.type{display:grid;gap:4px}
+.trow{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:baseline;padding-block:14px;border-bottom:1px solid var(--rule)}
+.trow .lbl{font-size:12px;color:var(--sub);line-height:1.5}
+.trow .lbl code{direction:ltr;display:block}
+.trow .s{min-width:0;overflow-wrap:anywhere}
+.dont .art{position:relative}
+.dont .art::after{content:"";position:absolute;inset:auto auto 10px 10px;width:26px;height:26px;border-radius:50%;background:#D7263D url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 7l10 10M17 7L7 17' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.rules{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.rule{border:1px solid var(--rule);border-radius:14px;padding:18px;background:var(--surface);display:grid;gap:6px;align-content:start}
+.rule h3{font-size:16px}
+.rule .yes{color:var(--coral);font-weight:700}
+.rule .no{color:var(--sub);text-decoration:line-through}
+.pattern{height:220px;border-radius:14px;overflow:hidden;background:var(--ink)}
+.pattern canvas{width:100%;height:100%;display:block}
+.tag{font-size:clamp(22px,3.5vw,34px);font-weight:900;line-height:1.5}
+.tag em{font-style:normal;color:var(--coral)}
+.files{font-size:13px;direction:ltr;text-align:left;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:16px;overflow-x:auto;white-space:pre;line-height:1.7;margin:0}
+@media (max-width:560px){.trow{grid-template-columns:1fr}.hd{grid-template-columns:1fr}.hd p{grid-column:1}}
+</style>
+
+<header class="cover">
+  <div class="in">
+    <div class="logo">{{fa-on-coral-t}}</div>
+    <h1>راهنمای هویت بصری</h1>
+    <p>شرکت توسعه هوشمند راستین · Rastin Intelligent Development</p>
+    <div class="meta"><span>نسخه ۱٫۰</span><span>آبان ۱۴۰۵</span><span>rastingroup.ir</span></div>
+  </div>
+</header>
+
+<main><div class="in">
+
+<section>
+  <div class="hd"><span class="n">۰۱</span><h2>نماد و ایده</h2><p>نماد راستین یک «شبکه‌ی رو به رشد» است: سه نود که به ترتیب بزرگ‌تر می‌شوند و روی یک مسیر صعودی به هم وصل‌اند، و یک شاخه‌ی فرعی دارند. نودهای تیره زیرساخت و داده‌اند. نود بزرگ مرجانی «هوشمندی» است و شاخه‌ی کهربایی خروجی و ارزشی است که به مشتری می‌رسد.</p></div>
+  <div class="grid">
+    <div class="tile"><div class="art on-tint">{{mark-color}}</div><div class="cap"><span>نماد اصلی</span><code>rastin-mark-color.svg</code></div></div>
+    <div class="tile"><div class="art on-white">{{fa-color}}</div><div class="cap"><span>لوگوی افقی فارسی (اصلی)</span><code>horizontal-fa-color</code></div></div>
+    <div class="tile"><div class="art on-white">{{en-color}}</div><div class="cap"><span>لوگوی افقی انگلیسی، عربی و ترکی</span><code>horizontal-en-color</code></div></div>
+    <div class="tile"><div class="art on-white">{{vertical-color}}</div><div class="cap"><span>لوگوی عمودی</span><code>vertical-color</code></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۲</span><h2>نسخه‌های رنگی</h2><p>روی زمینه‌ی روشن نسخه‌ی رنگی به کار می‌رود، روی زمینه‌ی تیره نسخه‌ی معکوس، و روی رنگ برند نسخه‌ی مخصوص زمینه‌ی مرجانی. نسخه‌های تک‌رنگ برای مهر، حکاکی، چاپ تک‌رنگ و گلدوزی است.</p></div>
+  <div class="grid">
+    <div class="tile"><div class="art on-ink">{{fa-reverse-t}}</div><div class="cap"><span>معکوس، روی زمینه‌ی تیره</span><code>reverse</code></div></div>
+    <div class="tile"><div class="art on-coral">{{fa-on-coral-t}}</div><div class="cap"><span>روی زمینه‌ی مرجانی</span><code>on-coral</code></div></div>
+    <div class="tile"><div class="art on-white">{{fa-mono-black}}</div><div class="cap"><span>تک‌رنگ تیره</span><code>mono-black</code></div></div>
+    <div class="tile"><div class="art photo">{{fa-mono-white-t}}</div><div class="cap"><span>تک‌رنگ سفید، روی عکس</span><code>mono-white</code></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۳</span><h2>حریم و حداقل اندازه</h2><p>دور لوگو باید فضای خالی بماند، به اندازه‌ی قطر نود بزرگ مرجانی (واحد X). لوگوی افقی کوچک‌تر از ۱۲۰ پیکسل (۳۰ میلی‌متر در چاپ) و نماد تنها کوچک‌تر از ۱۶ پیکسل (۵ میلی‌متر) استفاده نشود.</p></div>
+  <div class="grid">
+    <div class="tile"><div class="art space"><div class="box">{{fa-color}}<span class="x" style="top:8px;right:50%">X</span><span class="x" style="bottom:8px;right:50%">X</span><span class="x" style="right:10px;top:45%">X</span><span class="x" style="left:10px;top:45%">X</span></div></div><div class="cap"><span>حریم = X (قطر نود مرجانی)</span><code>clear space</code></div></div>
+    <div class="tile"><div class="art on-white" style="gap:14px;display:flex;align-items:end;justify-content:center;flex-wrap:wrap">
+      <span style="width:120px;display:block">{{fa-color}}</span><span style="width:32px;display:block">{{mark-color}}</span><span style="width:16px;display:block">{{mark-color}}</span></div><div class="cap"><span>حداقل: ۱۲۰px · ۳۲px · ۱۶px</span><code>min size</code></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۴</span><h2>کاربرد نادرست</h2><p>فایل‌های رسمی را همان‌طور که هستند به کار ببرید. هر تغییری در شکل، رنگ یا چیدمان لوگو ممنوع است.</p></div>
+  <div class="grid">
+    <div class="tile dont"><div class="art on-white"><span style="display:block;transform:scaleX(1.5);width:60%">{{fa-color}}</span></div><div class="cap"><span>کشیدن یا فشرده‌کردن</span></div></div>
+    <div class="tile dont"><div class="art on-white"><span style="display:block;transform:rotate(-14deg);width:70%">{{fa-color}}</span></div><div class="cap"><span>چرخاندن</span></div></div>
+    <div class="tile dont"><div class="art on-white" style="filter:hue-rotate(160deg)">{{fa-color}}</div><div class="cap"><span>تغییر رنگ (مثلاً آبی یا سبز)</span></div></div>
+    <div class="tile dont"><div class="art on-coral">{{fa-color}}</div><div class="cap"><span>نسخه‌ی رنگی روی زمینه‌ی مرجانی</span></div></div>
+    <div class="tile dont"><div class="art on-white" style="filter:drop-shadow(4px 6px 3px rgba(0,0,0,.45))">{{fa-color}}</div><div class="cap"><span>سایه، گرادیان یا افکت</span></div></div>
+    <div class="tile dont"><div class="art on-white" style="display:flex;gap:12px;align-items:center;justify-content:center"><span style="width:60px;display:block">{{mark-color}}</span><b style="font-family:Tahoma,serif;font-size:28px;color:var(--ink);font-weight:400">راستین</b></div><div class="cap"><span>بازنویسی نام با فونت دیگر</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۵</span><h2>رنگ‌ها</h2><p>مرجانی رنگ امضای برند است و برای دکمه‌های اصلی، تأکیدها و نقطه‌های مهم به کار می‌رود. «جوهری» رنگ متن و زمینه‌های تیره است و کهربایی فقط رنگ مکمل و کم‌مصرف است. آبی و سبز در هویت راستین استفاده نمی‌شوند.</p></div>
+  <div class="sw">
+    <div class="chip"><div class="c" style="background:#FF5A36;color:#fff">مرجانی راستین</div><dl><dt>HEX</dt><dd>#FF5A36</dd><dt>RGB</dt><dd>255 90 54</dd><dt>CMYK</dt><dd>0 75 85 0</dd><dt>Pantone</dt><dd>≈ 171 C</dd></dl></div>
+    <div class="chip"><div class="c" style="background:#1F1630;color:#fff">جوهری</div><dl><dt>HEX</dt><dd>#1F1630</dd><dt>RGB</dt><dd>31 22 48</dd><dt>CMYK</dt><dd>75 85 45 70</dd><dt>Pantone</dt><dd>≈ 5255 C</dd></dl></div>
+    <div class="chip"><div class="c" style="background:#FFB547;color:#1F1630">کهربایی</div><dl><dt>HEX</dt><dd>#FFB547</dd><dt>RGB</dt><dd>255 181 71</dd><dt>CMYK</dt><dd>0 32 80 0</dd><dt>Pantone</dt><dd>≈ 135 C</dd></dl></div>
+    <div class="chip"><div class="c" style="background:#FFF1EC;color:#1F1630">مرجانی روشن</div><dl><dt>HEX</dt><dd>#FFF1EC</dd><dt>کاربرد</dt><dd>زمینه‌ی بخش‌ها</dd></dl></div>
+    <div class="chip"><div class="c" style="background:#FBF8F7;color:#1F1630">کاغذی</div><dl><dt>HEX</dt><dd>#FBF8F7</dd><dt>کاربرد</dt><dd>زمینه‌ی صفحه</dd></dl></div>
+    <div class="chip"><div class="c" style="background:#6B6375;color:#fff">خاکستری بنفش</div><dl><dt>HEX</dt><dd>#6B6375</dd><dt>کاربرد</dt><dd>متن فرعی</dd></dl></div>
+  </div>
+  <div style="display:grid;gap:6px"><b style="font-size:14px">نسبت مصرف رنگ</b>
+    <div class="ratio"><span style="flex:55;background:#FBF8F7;color:#1F1630">روشن ۵۵٪</span><span style="flex:25;background:#1F1630;color:#fff">جوهری ۲۵٪</span><span style="flex:15;background:#FF5A36;color:#fff">مرجانی ۱۵٪</span><span style="flex:5;background:#FFB547;color:#1F1630">۵٪</span></div></div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۶</span><h2>تایپوگرافی</h2><p>فونت رسمی برند <b>وزیرمتن</b> است که رایگان و متن‌باز است (مجوز OFL) و حروف لاتین را هم پوشش می‌دهد. برای عربی هم همین فونت به کار می‌رود. در متن ترکی و انگلیسی از حروف لاتین همین خانواده استفاده کنید.</p></div>
+  <div class="type">
+    <div class="trow"><div class="lbl">تیتر نمایشی<code>Black 900 · 48/1.3</code></div><div class="s" style="font-size:clamp(30px,5vw,48px);font-weight:900;line-height:1.3">توسعه هوشمند، آینده هوشمندتر</div></div>
+    <div class="trow"><div class="lbl">تیتر ۱<code>ExtraBold 800 · 32/1.4</code></div><div class="s" style="font-size:clamp(24px,4vw,32px);font-weight:800">راهکارهای هوشمند برای سازمان‌ها</div></div>
+    <div class="trow"><div class="lbl">تیتر ۲<code>Bold 700 · 22/1.5</code></div><div class="s" style="font-size:22px;font-weight:700">تحلیل صوت تمام مکالمات</div></div>
+    <div class="trow"><div class="lbl">متن<code>Regular 400 · 16/1.9</code></div><div class="s" style="font-size:16px">راستین با توسعه‌ی نرم‌افزار سفارشی، راه‌اندازی مدل‌های هوش مصنوعی روی سرورهای خود سازمان و نرم‌افزار راست‌دسک، به سازمان‌ها کمک می‌کند تصمیم‌های سریع‌تر و دقیق‌تری بگیرند.</div></div>
+    <div class="trow"><div class="lbl">برچسب<code>Bold 700 · 13 · +4%</code></div><div class="s" style="font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--coral)">نرم‌افزار سفارشی · هوش مصنوعی · CRM</div></div>
+    <div class="trow"><div class="lbl">لاتین<code>Vazirmatn · EN / TR</code></div><div class="s" style="direction:ltr;text-align:left;font-size:20px;font-weight:700">Intelligent development, a smarter future.<br><span style="font-weight:400;font-size:16px">Akıllı geliştirme, daha akıllı bir gelecek.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۷</span><h2>المان گرافیکی: شبکه‌ی نودها</h2><p>زبان بصری راستین از خود نماد می‌آید: نودهای گرد و خط‌های اتصال با سر گرد. از این الگو در زمینه‌ی کاورها، اسلایدها، بنرها و هدر سایت استفاده کنید. نودهای مرجانی همیشه کم‌تعداد بمانند تا نقش «نقطه‌ی هوشمند» را حفظ کنند.</p></div>
+  <div class="pattern"><canvas id="net" aria-label="نمونه‌ی الگوی شبکه‌ی نودها"></canvas></div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۸</span><h2>شعار و لحن</h2><p>لحن راستین دقیق، مطمئن و روشن است. به‌جای وعده‌های کلی، مشخص بنویسید که چه چیزی بهتر می‌شود.</p></div>
+  <div class="tag">توسعه هوشمند، <em>آینده هوشمندتر</em></div>
+  <div class="rules">
+    <div class="rule"><h3>مشخص بنویسید</h3><span class="yes">«گزارش تمام تماس‌های مرکز پشتیبانی، هر روز صبح»</span><span class="no">«انقلابی در تجربه‌ی مشتری»</span></div>
+    <div class="rule"><h3>با زبان مشتری</h3><span class="yes">«مشتری‌هایتان را یک‌جا ببینید»</span><span class="no">«ماژول یکپارچه‌سازی داده‌های CRM»</span></div>
+    <div class="rule"><h3>نام‌ها</h3><span>نام شرکت <b>«راستین»</b> یا <b>«توسعه هوشمند راستین»</b>، و نام محصول <b>«راست‌دسک»</b> با نیم‌فاصله است. نام قدیمی محصول در هیچ متن، فایل یا طراحی‌ای نمی‌آید.</span></div>
+    <div class="rule"><h3>چهار زبان</h3><span>Rastin Intelligent Development · راستين للتطوير الذكي · Rastin Akıllı Geliştirme</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="hd"><span class="n">۰۹</span><h2>فایل‌ها</h2><p>همه‌ی فایل‌ها در پوشه‌ی <code>brand/</code> ریپازیتوری است. متن‌ها در فایل‌های SVG به منحنی تبدیل شده‌اند، پس برای باز کردنشان به نصب فونت نیازی نیست.</p></div>
+<pre class="files">brand/
+  logo/   rastin-horizontal-fa-*.svg   rastin-horizontal-en-*.svg
+          rastin-vertical-*.svg        rastin-mark-*.svg
+          variants: color · reverse · on-coral · mono-black · mono-white
+          favicon.svg · favicon.ico · rastin-app-icon.svg
+          png/  (@2x exports, favicon 16–512, app icon 1024)
+  fonts/  Vazirmatn (OFL)
+  guidelines/  this book</pre>
+</section>
+
+</div></main>
+
+<script>
+(function(){
+  const c=document.getElementById('net'); if(!c) return; const x=c.getContext('2d');
+  function draw(){
+    const r=c.getBoundingClientRect(), d=window.devicePixelRatio||1; c.width=r.width*d; c.height=r.height*d; x.scale(d,d);
+    const W=r.width,H=r.height; let s=7; const rnd=()=>((s=(s*9301+49297)%233280)/233280);
+    const pts=[]; const cols=Math.max(6,Math.round(W/70)), rows=4;
+    for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){const px=(i+.5)/cols*W+(rnd()-.5)*40, py=(j+.5)/rows*H+(rnd()-.5)*30-(i/cols)*24; pts.push({x:px,y:py,r:3+rnd()*7*(0.4+i/cols)})}
+    x.lineCap='round'; x.strokeStyle='rgba(255,255,255,.14)'; x.lineWidth=2;
+    pts.forEach((p,i)=>{pts.forEach((q,k)=>{if(k>i){const dd=Math.hypot(p.x-q.x,p.y-q.y); if(dd<95){x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}})});
+    pts.forEach((p,i)=>{x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle=i%11===5?'#FF5A36':i%13===3?'#FFB547':'rgba(255,255,255,.55)';x.fill()});
+  }
+  draw(); addEventListener('resize',()=>{c.getContext('2d').setTransform(1,0,0,1,0,0);draw()});
+})();
+</script>
