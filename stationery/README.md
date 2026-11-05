@@ -15,3 +15,28 @@
 ```bash
 cd stationery && php business-card.php 3 > build/business-card-print.html && node ../tools/stationery_pdf.js build/business-card-print.html build/business-card-print-3mm-bleed.pdf 91 61
 ```
+
+## سربرگ (A4)
+| فایل | کاربرد |
+|---|---|
+| `build/letterhead-fa.docx` / `letterhead-en.docx` | **قالب Word** برای نوشتن نامه: طرح سربرگ پشت متن در همه‌ی صفحه‌ها تکرار می‌شود. شماره، تاریخ، پیوست، متن و امضا قابل ویرایش‌اند |
+| `build/letterhead-fa-print-3mm-bleed.pdf` / `-en-` | برای چاپ سربرگ خام در چاپخانه (۲۱۶×۳۰۳ با حاشیه‌ی برش) |
+| `build/letterhead-fa.pdf` / `-en.pdf` | نسخه‌ی دیجیتال A4 |
+
+قالب Word با فونت **وزیرمتن** تنظیم شده است. فایل‌های فونت را از `brand/fonts/` روی رایانه‌ها نصب کنید.
+اگر روی سربرگ چاپ‌شده در چاپخانه نامه پرینت می‌گیرید، تصویر پس‌زمینه را در Word حذف کنید (دوبار کلیک روی سرصفحه → انتخاب تصویر → Delete).
+
+## پاکت
+| فایل | اندازه |
+|---|---|
+| `build/envelope-dl-print-3mm-bleed.pdf` | پاکت نامه‌ای (ملخی) ۲۲۰×۱۱۰ |
+| `build/envelope-c4-print-3mm-bleed.pdf` | پاکت A4 (C4) ۲۲۹×۳۲۴ |
+
+## ساخت دوباره
+```bash
+cd stationery
+php letterhead.php 3 fa print > build/lh-fa-print.html && node ../tools/stationery_pdf.js build/lh-fa-print.html build/letterhead-fa-print-3mm-bleed.pdf 216 303
+php envelope.php 3 dl > build/env-dl-print.html && node ../tools/stationery_pdf.js build/env-dl-print.html build/envelope-dl-print-3mm-bleed.pdf 226 116
+# قالب Word (پس از ساخت تصویر پس‌زمینه‌ی letterhead-*-bg.jpg):
+python3 ../tools/build_letterhead_docx.py
+```
