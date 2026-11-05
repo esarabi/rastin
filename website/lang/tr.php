@@ -11,7 +11,7 @@ return [
     'brand' => [
         'company' => 'Rastin',
         'company_full' => 'Rastin Akıllı Geliştirme',
-        'tagline' => 'Akıllı geliştirme, daha akıllı bir gelecek.',
+        'tagline' => 'Akıllı geliştirme, güvenilir bir gelecek.',
         'product' => 'RastDesk',
     ],
     'nav' => [

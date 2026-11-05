@@ -11,7 +11,7 @@ return [
     'brand' => [
         'company' => 'Rastin',
         'company_full' => 'Rastin Intelligent Development',
-        'tagline' => 'Intelligent development, a smarter future.',
+        'tagline' => 'Intelligent development, a reliable future.',
         'product' => 'RastDesk',
     ],
     'nav' => [

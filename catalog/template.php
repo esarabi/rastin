@@ -245,7 +245,7 @@ ul,ol{margin:0;padding:0;list-style:none}
     <div class="cover-logo"><?= $strip($logoRev) ?></div>
     <div class="cover-title">
       <span class="kicker">معرفی شرکت · ۱۴۰۵</span>
-      <h1>توسعه هوشمند،<br><em>آینده هوشمندتر</em></h1>
+      <h1>توسعه هوشمند،<br><em>آینده مطمئن</em></h1>
       <p>نرم‌افزار سازمانی و هوش مصنوعی برای سازمان‌ها و کسب‌وکارهای ایرانی؛ از راست‌دسک تا تحلیل صوت مکالمات.</p>
     </div>
     <div class="cover-foot">
