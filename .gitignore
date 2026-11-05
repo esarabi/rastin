@@ -6,3 +6,4 @@ website/uploads/*
 !website/uploads/.htaccess
 !website/uploads/.gitkeep
 .DS_Store
+catalog/build/*.html
