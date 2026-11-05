@@ -1,0 +1,8 @@
+website/config.php
+website/storage/*
+!website/storage/.htaccess
+!website/storage/.gitkeep
+website/uploads/*
+!website/uploads/.htaccess
+!website/uploads/.gitkeep
+.DS_Store
