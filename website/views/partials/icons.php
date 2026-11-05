@@ -32,6 +32,8 @@ function icon(string $name, string $class = 'ico'): string
         'whatsapp' => '<path d="M4.5 19.5 5.6 16A8 8 0 1 1 8 18.4Z"/><path d="M9.3 8.8c.2 2.8 3 5.6 5.8 5.9l1-1.3-1.8-1-.8.7c-1-.4-1.9-1.3-2.4-2.3l.7-.9-.9-1.8Z"/>',
         'x' => '<path d="M5 4.5h3.8L19 19.5h-3.8ZM18.8 4.5 13.4 10.6M5.2 19.5l5.5-6.2"/>',
         'aparat' => '<circle cx="12" cy="12" r="7.5"/><path d="m10.3 9 4.4 3-4.4 3Z"/>',
+        'mobile' => '<rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/>',
+        'building' => '<path d="M4 20.5h16M6 20.5V5a1.5 1.5 0 0 1 1.5-1.5h9A1.5 1.5 0 0 1 18 5v15.5"/><path d="M9.5 7.5h1.5M13 7.5h1.5M9.5 11h1.5M13 11h1.5M9.5 14.5h1.5M13 14.5h1.5M11 20.5v-3h2v3"/>',
         'plus' => '<path d="M12 5v14M5 12h14"/>',
     ];
     $body = $p[$name] ?? $p['check'];
