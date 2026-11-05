@@ -4,19 +4,55 @@ $rastdeskUrl = setting('rastdesk_url', 'https://rastdesk.ir');
 $eyebrow = $r['eyebrow'];
 $heading = $r['heading'];
 $sub = $r['sub'];
-$actions = '<div class="actions"><a class="btn btn-primary btn-lg" href="' . e(url($lang, 'demo')) . '">' . e(t('common.request_demo')) . '</a>'
-    . '<a class="btn btn-outline btn-lg" href="' . e($rastdeskUrl) . '" target="_blank" rel="noopener">' . e(t('common.visit_rastdesk')) . ' ↗</a></div>';
+$actions = '<div class="actions"><a class="btn btn-primary btn-lg" href="' . e(url($lang, 'demo')) . '?interest=rastdesk_cloud#form">' . e(t('common.request_demo')) . '</a>'
+    . '<a class="btn btn-outline btn-lg" href="' . e(url($lang, 'pricing')) . '">' . e(t('nav.pricing')) . '</a></div>'
+    . '<ul class="head-stats">';
+foreach ($r['stats'] as $st) {
+    $actions .= '<li><b>' . e($st['value']) . '</b><span>' . e($st['label']) . '</span></li>';
+}
+$actions .= '</ul>';
 require ROOT . '/views/partials/page_head.php';
 ?>
 <section class="section">
   <div class="wrap">
-    <div class="sec-head"><h2><?= e($r['modules_title']) ?></h2></div>
-    <div class="cards cards-3">
-      <?php foreach ($r['modules'] as $m): ?>
-        <div class="card"><span class="ico-badge"><?= icon($m['icon']) ?></span><h3><?= e($m['title']) ?></h3><p><?= e($m['text']) ?></p></div>
+    <div class="sec-head"><h2><?= e($r['why_title']) ?></h2></div>
+    <div class="cards cards-4">
+      <?php foreach ($r['why'] as $w): ?>
+        <div class="card"><span class="ico-badge"><?= icon($w['icon']) ?></span><h3><?= e($w['title']) ?></h3><p><?= e($w['text']) ?></p></div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="modules">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><?= e($r['modules_title']) ?></h2>
+      <p class="lead"><?= e($r['modules_sub']) ?></p>
+    </div>
+    <div class="mod-groups">
+      <?php foreach ($r['groups'] as $g): ?>
+        <div class="mod-card">
+          <h3><span class="ico-badge"><?= icon($g['icon']) ?></span><?= e($g['title']) ?></h3>
+          <ul><?php foreach ($g['items'] as $it): ?><li><?= icon('check') ?><span><?= e($it) ?></span></li><?php endforeach; ?></ul>
+        </div>
       <?php endforeach; ?>
     </div>
     <p class="note-line"><?= e($r['note']) ?> <a href="<?= e($rastdeskUrl) ?>" target="_blank" rel="noopener" dir="ltr"><?= e(preg_replace('#^https?://#', '', $rastdeskUrl)) ?> ↗</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><?= e($r['onboard_title']) ?></h2>
+      <p class="lead"><?= e($r['onboard_sub']) ?></p>
+    </div>
+    <ol class="steps steps-3">
+      <?php foreach ($r['onboard'] as $i => $st): ?>
+        <li><span class="step-n"><?= e(digits((string) ($i + 1), $lang)) ?></span><h3><?= e($st['title']) ?></h3><p><?= e($st['text']) ?></p></li>
+      <?php endforeach; ?>
+    </ol>
   </div>
 </section>
 

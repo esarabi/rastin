@@ -112,6 +112,13 @@ function setting(string $key, string $default = ''): string
     return $v !== '' ? $v : $default;
 }
 
+/** Like setting(), but an explicitly saved empty value stays empty (the default applies only when never saved). */
+function setting_raw(string $key, string $default = ''): string
+{
+    $all = settings_all();
+    return array_key_exists($key, $all) ? $all[$key] : $default;
+}
+
 function setting_save(string $key, string $value): void
 {
     $pdo = db();

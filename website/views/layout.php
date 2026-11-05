@@ -14,7 +14,7 @@ $email = setting('email', 'info@rastingroup.ir');
 $rastdeskUrl = setting('rastdesk_url', 'https://rastdesk.ir');
 $socials = [];
 foreach (['instagram', 'linkedin', 'telegram', 'whatsapp', 'x', 'aparat'] as $s) {
-    if (($u = setting('social_' . $s)) !== '') {
+    if (($u = setting_raw('social_' . $s, SOCIAL_DEFAULTS[$s] ?? '')) !== '') {
         $socials[$s] = $u;
     }
 }

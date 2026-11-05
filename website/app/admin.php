@@ -354,11 +354,21 @@ function admin_setting_fields(): array
                 'endpoint_token' => ['label' => 'توکن احراز هویت (اختیاری، به صورت Bearer ارسال می‌شود)', 'default' => '', 'ltr' => true],
             ],
         ],
+        'prices' => [
+            'title' => 'قیمت نسخه‌های راست‌دسک',
+            'help' => 'به میلیون تومان، فقط عدد. اگر خالی بگذارید، به‌جای قیمت «استعلام قیمت» نمایش داده می‌شود.',
+            'fields' => [
+                'price_basic' => ['label' => 'نسخه‌ی پایه', 'default' => PRICE_DEFAULTS['basic'], 'ltr' => true, 'allow_empty' => true],
+                'price_pro' => ['label' => 'نسخه‌ی پرو', 'default' => PRICE_DEFAULTS['pro'], 'ltr' => true, 'allow_empty' => true],
+                'price_plus' => ['label' => 'نسخه‌ی پلاس', 'default' => PRICE_DEFAULTS['plus'], 'ltr' => true, 'allow_empty' => true],
+                'price_max' => ['label' => 'نسخه‌ی مکس', 'default' => PRICE_DEFAULTS['max'], 'ltr' => true, 'allow_empty' => true],
+            ],
+        ],
         'social' => [
             'title' => 'شبکه‌های اجتماعی',
             'help' => 'هر کدام را خالی بگذارید، در سایت نمایش داده نمی‌شود.',
             'fields' => [
-                'social_instagram' => ['label' => 'اینستاگرام', 'default' => '', 'ltr' => true, 'type' => 'url'],
+                'social_instagram' => ['label' => 'اینستاگرام', 'default' => SOCIAL_DEFAULTS['instagram'], 'ltr' => true, 'type' => 'url'],
                 'social_linkedin' => ['label' => 'لینکدین', 'default' => '', 'ltr' => true, 'type' => 'url'],
                 'social_telegram' => ['label' => 'تلگرام', 'default' => '', 'ltr' => true, 'type' => 'url'],
                 'social_whatsapp' => ['label' => 'واتس‌اپ', 'default' => '', 'ltr' => true, 'type' => 'url'],
@@ -394,6 +404,9 @@ function admin_settings(string $method): void
                 }
                 if (($f['type'] ?? '') === 'url' && $v !== '' && !preg_match('#^https?://#i', $v)) {
                     $v = 'https://' . $v;
+                }
+                if (starts_with($key, 'price_')) {
+                    $v = preg_replace('/[^\d.]/', '', normalize_digits($v));
                 }
                 setting_save($key, $v);
             }

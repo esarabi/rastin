@@ -6,7 +6,7 @@
       <h2><?= e($g['title']) ?></h2>
       <?php if (!empty($g['help'])): ?><p class="muted"><?= e($g['help']) ?></p><?php endif; ?>
       <div class="grid2">
-        <?php foreach ($g['fields'] as $key => $f): $val = setting($key, $f['default']); ?>
+        <?php foreach ($g['fields'] as $key => $f): $val = setting_raw($key, $f['default']); ?>
           <label><?= e($f['label']) ?>
             <?php if (isset($f['options'])): ?>
               <select name="s[<?= e($key) ?>]"><?php foreach ($f['options'] as $ok => $ol): ?><option value="<?= e($ok) ?>"<?= $val === $ok ? ' selected' : '' ?>><?= e($ol) ?></option><?php endforeach; ?></select>

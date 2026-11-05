@@ -233,3 +233,10 @@ function media_url(string $stored): string
     }
     return base_path() . $stored;
 }
+
+/* ---------- defaults that the admin panel can override ---------- */
+
+// RastDesk edition prices in million Toman (from the official RastDesk catalog).
+const PRICE_DEFAULTS = ['basic' => '99', 'pro' => '160', 'plus' => '350', 'max' => '600'];
+
+const SOCIAL_DEFAULTS = ['instagram' => 'https://instagram.com/rastdesk'];
