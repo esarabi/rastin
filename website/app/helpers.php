@@ -236,7 +236,7 @@ function media_url(string $stored): string
 
 /* ---------- defaults that the admin panel can override ---------- */
 
-// RastDesk edition prices in million Toman (from the official RastDesk catalog).
-const PRICE_DEFAULTS = ['basic' => '99', 'pro' => '160', 'plus' => '350', 'max' => '600'];
+// RastDesk edition prices in million Toman (official 1405 price list).
+const PRICE_DEFAULTS = ['basic' => '153', 'pro' => '246', 'plus' => '539', 'max' => '924'];
 
 const SOCIAL_DEFAULTS = ['instagram' => 'https://instagram.com/rastdesk'];

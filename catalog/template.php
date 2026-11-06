@@ -60,6 +60,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .sheet:last-child{page-break-after:auto;break-after:auto}
 @media screen{body{display:grid;gap:10mm;justify-content:center;padding:10mm 0}.sheet{box-shadow:0 4px 24px rgba(0,0,0,.25)}}
 .page{position:absolute;inset:var(--b);padding:18mm 17mm 20mm;display:flex;flex-direction:column;gap:7mm}
+.page>*{flex-shrink:0}
 .ico{width:5.5mm;height:5.5mm;flex:none}
 .eyebrow{font-size:8.5pt;font-weight:800;color:var(--coral);letter-spacing:.02em}
 .h1{font-size:25pt;font-weight:900;line-height:1.35}
@@ -115,7 +116,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .sol.hl{background:var(--coral-50);border-color:var(--coral-100)}
 
 /* ---- 4. rastdesk ---- */
-.rd-head{background:var(--ink);margin:calc(-18mm) -17mm 0;padding:16mm 17mm 9mm;position:relative;overflow:hidden;display:grid;gap:3mm}
+.rd-head{background:var(--ink);margin:calc(-18mm) -17mm 0;padding:14mm 17mm 7mm;position:relative;overflow:hidden;display:grid;gap:3mm}
 .rd-head > :not(.net){position:relative}
 .rd-head .h1{color:#fff}
 .rd-head .lead{color:#c9c1d2;max-width:150mm}
@@ -123,12 +124,12 @@ ul,ol{margin:0;padding:0;list-style:none}
 .rd-stats b{display:block;color:#fff;font-size:17pt;font-weight:900;line-height:1.3}
 .rd-stats span{color:#c9c1d2;font-size:8.5pt}
 .mods{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
-.mod{background:var(--paper);border-radius:4mm;padding:5mm;display:grid;gap:2.5mm;align-content:start}
+.mod{background:var(--paper);border-radius:4mm;padding:4mm 4.5mm;display:grid;gap:2mm;align-content:start}
 .mod h4{display:flex;align-items:center;gap:2.5mm;font-size:10.5pt;font-weight:800}
 .mod h4 .badge{width:8mm;height:8mm;border-radius:2.5mm;background:#fff}
 .mod h4 .badge .ico{width:4.5mm;height:4.5mm}
-.mod ul{display:grid;gap:1mm}
-.mod li{font-size:8.6pt;color:var(--ink)}
+.mod ul{display:grid;gap:.4mm}
+.mod li{font-size:8.3pt;color:var(--ink);line-height:1.7}
 .mod li .ico{width:3.6mm;height:3.6mm;margin-top:1.2mm}
 .why4{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}
 .why4 div{display:grid;gap:1.2mm;align-content:start}

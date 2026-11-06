@@ -15,3 +15,4 @@ rastdesk/storage/*
 rastdesk/uploads/*
 !rastdesk/uploads/.htaccess
 !rastdesk/uploads/.gitkeep
+tools/__pycache__/
