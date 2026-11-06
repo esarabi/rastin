@@ -8,3 +8,10 @@ website/uploads/*
 .DS_Store
 catalog/build/*.html
 stationery/build/*.html
+rastdesk/config.php
+rastdesk/storage/*
+!rastdesk/storage/.htaccess
+!rastdesk/storage/.gitkeep
+rastdesk/uploads/*
+!rastdesk/uploads/.htaccess
+!rastdesk/uploads/.gitkeep
